@@ -1,4 +1,5 @@
 .venv/
+.venv-lumi
 __pycache__/
 *.pyc
 dev-ignore/
@@ -11,3 +12,8 @@ eval_bundle/
 # Local setup
 CLAUDE.md
 wandb/
+
+# LUMI local run artifacts
+lumi-work/
+logs/
+lumi/.last-job-id

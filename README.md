@@ -7,6 +7,21 @@ nanochat is the simplest experimental harness for training LLMs. It is designed 
 
 For questions about the repo, I recommend either using [DeepWiki](https://deepwiki.com/karpathy/nanochat) from Devin/Cognition to ask questions about the repo, or use the [Discussions tab](https://github.com/karpathy/nanochat/discussions), or come by the [#nanochat](https://discord.com/channels/1020383067459821711/1427295580895314031) channel on Discord.
 
+## LUMI quick start
+
+This fork includes a small LUMI launcher in [`lumi/`](lumi/). It is meant for a
+first end-to-end smoke run on LUMI-G using the LUMI AI Factory ROCm/PyTorch
+container.
+
+```bash
+git clone https://github.com/BirgerMoell/nanochat.git
+cd nanochat
+bash lumi/run-lumi.sh first --project project_462000963
+```
+
+See [`lumi/README.md`](lumi/README.md) for setup, logs, and the optional 8-GPU
+pilot command.
+
 ## Time-to-GPT-2 Leaderboard
 
 Presently, the main focus of development is on tuning the pretraining stage, which takes the most amount of compute. Inspired by the modded-nanogpt repo and to incentivise progress and community collaboration, nanochat maintains a leaderboard for a "GPT-2 speedrun", which is the wall-clock time required to train a nanochat model to GPT-2 grade capability, as measured by the DCLM CORE score. The [runs/speedrun.sh](runs/speedrun.sh) script always reflects the reference way to train GPT-2 grade model and talk to it. The current leaderboard looks as follows:
